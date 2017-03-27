@@ -1,5 +1,9 @@
 # PreJSS Example
 
+<img align="right" width="92" height="104"
+     title="Logo of PreJSS, webpack style"
+     src="https://raw.githubusercontent.com/axept/prejss/master/docs/logo.png">
+     
 Isomorphic React.js application with using Server-Side Rendering (SSR), Hot-Module Reloading (HMR), JSS (as the best CSS-in-JSS library) and preJSS to transform CSS to CSS-in-JSS plain objects "on-the-fly".
 
 See more details here:
