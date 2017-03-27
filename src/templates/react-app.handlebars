@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js {{rootCSSClasses}}" lang="{{language}}">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>{{{title}}}</title>
+    <meta name="description" content="Simple usage example for PreJSS package"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <script type="text/javascript">
+      (function () {
+        var disabledJSRE = new RegExp('(^|\\s)no-js(\\s|$)');
+        var newClassName = document.documentElement.className
+          .replace(disabledJSRE, '$1 js $2')
+        document.documentElement.className = newClassName;
+      })();
+    </script>
+    <meta name="keywords" content="prejss css-in-js css"/>
+    <style id="criticalCSS" type="text/css">{{{criticalCSS}}}</style>
+  </head>
+  <body>
+    <div id="root">{{{rootHTML}}}</div>
+    <script type="text/javascript">
+      // IE9 fix console issues
+      if (!window.console) {
+        window.console = {
+          log: function() {},
+          warn : function() {},
+          error: function() {},
+          time: function() {},
+          timeEnd: function() {}
+        };
+      }
+
+      // Allow to remove critical CSS to animation issues and so on
+      window._removeCriticalCSS = function () {
+        var styleElement = document.getElementById('criticalCSS');
+        if (styleElement) {
+          var styleContainer = styleElement.parentNode;
+          styleContainer.removeChild(styleElement);
+        }
+      };
+    </script>
+    <script src="/assets/js/{{bundle1}}"></script>
+  </body>
+</html>

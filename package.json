@@ -1,0 +1,50 @@
+{
+  "name": "prejss-example-app",
+  "version": "0.1.0",
+  "description": "PreJSS example: React.js application with using Server-Side Rendering, HMR, JSS and preJSS",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean &&  npm run build:webpack",
+    "build:webpack": "cross-env SERVER=true webpack --config webpack.config.babel.js",
+    "test:eslint": "./node_modules/.bin/eslint src/",
+    "start": "node src/server-starter",
+    "start:local": "nodemon src/server-starter.js"
+  },
+  "author": "Axept <office@axept.co>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2015-loose": "^8.0.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "compression": "^1.6.2",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^3.2.4",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-minify-html": "^0.10.0",
+    "jss": "^6.5.0",
+    "jss-preset-default": "^1.3.1",
+    "postcss-extend": "^1.0.5",
+    "prejss": "^1.2.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-jss": "^5.4.0",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.17.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-eslint": "^7.2.1",
+    "babel-plugin-transform-prejss": "^0.5.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-loader": "^1.7.0",
+    "webpack": "^2.3.2"
+  }
+}
