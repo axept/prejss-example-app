@@ -33,7 +33,7 @@ Use HMR features and some other advanced feature to get your development experie
 2. Then just launch it:
 
    ```bash
-   npm run start:local
+   NODE_ENV=development npm run start:local
    ```
 
 
